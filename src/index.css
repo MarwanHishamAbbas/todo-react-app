@@ -1,3 +1,28 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+body {
+  font-family: "Montserrat", sans-serif;
+  background-color: #161d31;
+  color: #b4b7bd;
+  padding: 4rem;
+  height: 100vh;
+}
+
+#root {
+  height: 100%;
+}
+
+.modal {
+  width: clamp(50%, 500px, 90%);
+  height: min(50%, 400px);
+}
+
+@layer components {
+  .btn {
+    @apply bg-primary px-14 py-3 mb-10 rounded-lg transition-all hover:bg-[#8f84f5] text-xl font-semibold text-[#ffffff];
+  }
+}
