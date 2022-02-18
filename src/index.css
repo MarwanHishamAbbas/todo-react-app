@@ -33,6 +33,6 @@ body {
 
 @layer components {
   .btn {
-    @apply bg-primary px-14 py-3 mb-10 rounded-lg transition-all hover:bg-[#8f84f5] text-xl font-semibold text-[#ffffff];
+    @apply bg-primary w-full px-14 py-3 mb-10 rounded-lg transition-all hover:bg-[#8f84f5] text-xl font-semibold text-[#ffffff];
   }
 }

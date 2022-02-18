@@ -1,7 +1,6 @@
 import React from "react";
-import TodoList from "../components/tasks/TodoList";
 const ImportantTasks = () => {
-  return <TodoList />;
+  return <h1>Important</h1>;
 };
 
 export default ImportantTasks;

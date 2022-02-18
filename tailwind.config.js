@@ -3,6 +3,7 @@ module.exports = {
   theme: {
     colors: {
       primary: "#7367F0",
+      secondary: "#F89B43",
       bodytext: "#B4B7BD",
       app: "#283046",
       backdrop: "#000000e1",

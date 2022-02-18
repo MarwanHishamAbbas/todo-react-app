@@ -1,8 +1,7 @@
 import React from "react";
-import TodoList from "../components/tasks/TodoList";
 
 const CompletedTasks = () => {
-  return <TodoList />;
+  return <h1>Completed</h1>;
 };
 
 export default CompletedTasks;

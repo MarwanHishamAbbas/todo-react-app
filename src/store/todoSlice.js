@@ -9,11 +9,15 @@ const todoSlice = createSlice({
     addTodo(state, action) {
       const newTodo = action.payload;
       state.todos.push({
+        id: newTodo.id,
         title: newTodo.title,
         description: newTodo.description,
       });
     },
-    removeTodo() {},
+    removeTodo(state, action) {
+      const todoId = action.payload;
+      state.todos = state.todos.filter((item) => item.id !== todoId);
+    },
   },
 });
 

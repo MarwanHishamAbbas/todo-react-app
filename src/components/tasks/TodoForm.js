@@ -1,11 +1,13 @@
 import React, { useRef } from "react";
 import { useDispatch } from "react-redux";
 import { todoActions } from "../../store/todoSlice";
+import { v4 as uuid } from "uuid";
 
 const TodoForm = ({ onCloseModal }) => {
   const titleInputRef = useRef();
   const descriptionInputRef = useRef();
   const dispatch = useDispatch();
+  const unique_id = uuid();
 
   const sumbitFormHandler = (event) => {
     event.preventDefault();
@@ -13,6 +15,7 @@ const TodoForm = ({ onCloseModal }) => {
     const enteredDescription = titleInputRef.current.value;
     dispatch(
       todoActions.addTodo({
+        id: unique_id,
         title: enteredTitle,
         description: enteredDescription,
       })
