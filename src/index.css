@@ -18,7 +18,17 @@ body {
 
 .modal {
   width: clamp(50%, 500px, 90%);
-  height: min(50%, 400px);
+  height: min(50%, 500px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.input {
+  background: transparent;
+  outline: none;
+  border: 1px solid #676d7d60;
+  border-radius: 0.2rem;
+  padding: 0.25rem 1rem;
 }
 
 @layer components {
