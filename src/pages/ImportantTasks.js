@@ -1,6 +1,11 @@
 import React from "react";
+import TodoList from "../components/tasks/TodoList";
+import { useSelector } from "react-redux";
+
 const ImportantTasks = () => {
-  return <h1>Important</h1>;
+  const todos = useSelector((state) => state.todo.todos);
+  const importantTodos = todos.filter((item) => item.important === true);
+  return <TodoList todos={importantTodos} />;
 };
 
 export default ImportantTasks;

@@ -12,11 +12,18 @@ const todoSlice = createSlice({
         id: newTodo.id,
         title: newTodo.title,
         description: newTodo.description,
+        important: false,
+        completed: false,
       });
     },
     removeTodo(state, action) {
       const todoId = action.payload;
       state.todos = state.todos.filter((item) => item.id !== todoId);
+    },
+    toggleImportant(state, action) {
+      const todoId = action.payload.id;
+      const importantTodo = state.todos.find((item) => item.id === todoId);
+      importantTodo.important = !action.payload.isImportant;
     },
   },
 });

@@ -1,8 +1,7 @@
 import React from "react";
-import { useSelector } from "react-redux";
+
 import TodoItem from "./TodoItem";
-const TodoList = () => {
-  const todos = useSelector((state) => state.todo.todos);
+const TodoList = ({ todos }) => {
   return (
     <main className="w-full">
       {todos.map((item) => (
@@ -11,6 +10,7 @@ const TodoList = () => {
           key={item.id}
           title={item.title}
           description={item.description}
+          important={item.important}
         />
       ))}
     </main>
