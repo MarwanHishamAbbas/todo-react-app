@@ -10,7 +10,9 @@ const TodoItem = ({ title, id, important, completed }) => {
   const dispatch = useDispatch();
 
   const toggleImportantHandler = () => {
+    // Change false => true in the component
     setIsImportant(!isImportant);
+    // Change false => true in the slice
     dispatch(
       todoActions.toggleImportant({
         id,
@@ -19,7 +21,9 @@ const TodoItem = ({ title, id, important, completed }) => {
     );
   };
   const toggleCompletedHandler = () => {
+    // Change false => true in the component
     setIsCompleted(!isCompleted);
+    // Change false => true in the slice
     dispatch(
       todoActions.toggleCompleted({
         id,

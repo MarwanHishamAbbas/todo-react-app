@@ -1,7 +1,11 @@
 import React from "react";
-
+import NoTasks from "./NoTasks";
 import TodoItem from "./TodoItem";
+
 const TodoList = ({ todos }) => {
+  if (!todos || todos.length === 0) {
+    return <NoTasks />;
+  }
   return (
     <main className="w-full">
       {todos.map((item) => (

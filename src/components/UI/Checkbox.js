@@ -2,13 +2,13 @@ import React from "react";
 import { FiCheck } from "react-icons/fi";
 const Checkbox = ({ onToggle, completed }) => {
   return (
-    <label className=" flex relative checkbox-label pointer">
+    <label className=" flex relative z-0 checkbox-label pointer">
       <input
+        onClick={onToggle}
         type="checkbox"
         name="checkbox"
         id="checkbox"
         className="appearance-none outline-none h-6 w-6 border-2 rounded border-bodytext"
-        onClick={onToggle}
       />
       <FiCheck
         className={

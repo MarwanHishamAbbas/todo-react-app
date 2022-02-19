@@ -8,7 +8,7 @@ body {
   font-family: "Montserrat", sans-serif;
   background-color: #161d31;
   color: #b4b7bd;
-  padding: 6rem;
+  padding: 7rem 15rem;
   height: 100vh;
 }
 
@@ -30,10 +30,6 @@ body {
   border-radius: 0.2rem;
   padding: 0.25rem 1rem;
 }
-
-/* #checkbox:checked ~ .check-icon {
-  @apply opacity-100 bg-primary outline-none;
-} */
 
 @layer components {
   .btn {

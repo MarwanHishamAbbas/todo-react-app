@@ -2,11 +2,13 @@ import React, { useRef } from "react";
 import { useDispatch } from "react-redux";
 import { todoActions } from "../../store/todoSlice";
 import { v4 as uuid } from "uuid";
+import { useNavigate } from "react-router-dom";
 
 const TodoForm = ({ onCloseModal }) => {
   const titleInputRef = useRef();
   const descriptionInputRef = useRef();
   const dispatch = useDispatch();
+  const navigate = useNavigate();
   const unique_id = uuid();
 
   const sumbitFormHandler = (event) => {
@@ -20,6 +22,7 @@ const TodoForm = ({ onCloseModal }) => {
         description: enteredDescription,
       })
     );
+    navigate("/");
     onCloseModal();
   };
   return (
