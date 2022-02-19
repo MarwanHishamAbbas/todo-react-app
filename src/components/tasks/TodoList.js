@@ -11,6 +11,7 @@ const TodoList = ({ todos }) => {
           title={item.title}
           description={item.description}
           important={item.important}
+          completed={item.completed}
         />
       ))}
     </main>

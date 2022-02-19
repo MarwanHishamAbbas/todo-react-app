@@ -25,6 +25,11 @@ const todoSlice = createSlice({
       const importantTodo = state.todos.find((item) => item.id === todoId);
       importantTodo.important = !action.payload.isImportant;
     },
+    toggleCompleted(state, action) {
+      const todoId = action.payload.id;
+      const completedTodo = state.todos.find((item) => item.id === todoId);
+      completedTodo.completed = !action.payload.completed;
+    },
   },
 });
 

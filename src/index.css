@@ -31,9 +31,9 @@ body {
   padding: 0.25rem 1rem;
 }
 
-#checkbox:checked ~ .check-icon {
+/* #checkbox:checked ~ .check-icon {
   @apply opacity-100 bg-primary outline-none;
-}
+} */
 
 @layer components {
   .btn {
