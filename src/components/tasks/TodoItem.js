@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { FiTrash, FiStar } from "react-icons/fi";
 import { useDispatch } from "react-redux";
 import { todoActions } from "../../store/todoSlice";
+import Checkbox from "../UI/Checkbox";
 
 const TodoItem = ({ title, id, important }) => {
   const [isImportant, setIsImportant] = useState(important);
@@ -23,8 +24,8 @@ const TodoItem = ({ title, id, important }) => {
   return (
     <main className="relative z-1 flex items-center justify-between px-10 py-5">
       <div className="flex items-center after:content-[''] after:absolute after:w-full after:h-[1px] after:bg-border after:bottom-0 after:left-0">
-        <input type="checkbox" name="checkbox" id="checkbox" />
-        <h1 className="ml-3 text-lg">{title}</h1>
+        <Checkbox />
+        <label className="ml-3 text-lg">{title}</label>
       </div>
       <div className="flex relative z-0 text-xl">
         <FiStar
