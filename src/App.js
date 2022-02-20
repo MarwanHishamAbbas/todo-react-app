@@ -9,7 +9,9 @@ import { useSelector } from "react-redux";
 import Modal from "./components/Modal/Modal";
 
 function App() {
-  const state = useSelector((state) => state.todo);
+  const todos = useSelector((state) => state.todo.todos)
+    .slice()
+    .reverse();
   const [modalOpen, setModalOpen] = useState(false);
   const openModalHandler = () => {
     setModalOpen(true);
@@ -23,15 +25,9 @@ function App() {
       {modalOpen && <Modal onCloseModal={closeModalHandler} />}
       <SideBar onOpenModal={openModalHandler} />
       <Routes>
-        <Route path="/" element={<AllTasks todos={state.todos} />} />
-        <Route
-          path="/important"
-          element={<ImportantTasks todos={state.todos} />}
-        />
-        <Route
-          path="/completed"
-          element={<CompletedTasks todos={state.todos} />}
-        />
+        <Route path="/" element={<AllTasks todos={todos} />} />
+        <Route path="/important" element={<ImportantTasks todos={todos} />} />
+        <Route path="/completed" element={<CompletedTasks todos={todos} />} />
       </Routes>
     </Layout>
   );

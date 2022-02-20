@@ -12,9 +12,9 @@ body {
   height: 100vh;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 900px) {
   body {
-    padding: 5rem;
+    padding: 3rem;
   }
 }
 @media (max-width: 425px) {

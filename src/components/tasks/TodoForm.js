@@ -28,7 +28,7 @@ const TodoForm = ({ onCloseModal }) => {
   return (
     <form
       onSubmit={sumbitFormHandler}
-      className="w-2/5 mx-auto "
+      className="w-2/5 lg:w-3/4 mx-auto "
       action="submit"
     >
       <div className="flex flex-col mb-5">
