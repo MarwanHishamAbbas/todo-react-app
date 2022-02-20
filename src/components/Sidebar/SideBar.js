@@ -24,20 +24,22 @@ const SIDEBAR_DATA = [
 
 const SideBar = (props) => {
   return (
-    <div className="p-10 w-1/4 border-r border-border">
+    <div className="relative p-10 w-1/4 lg:w-full border-r border-border">
       <button onClick={props.onOpenModal} className="btn">
         Add Task
       </button>
-      {SIDEBAR_DATA.map((item) => {
-        return (
-          <SideBarItems
-            key={item.id}
-            icon={item.icon}
-            title={item.title}
-            path={item.path}
-          />
-        );
-      })}
+      <div className="lg:flex sm:block justify-between lg:after:content-[''] lg:after:absolute lg:after:w-full lg:after:h-[1px] lg:after:bg-border lg:after:bottom-0 lg:after:left-0">
+        {SIDEBAR_DATA.map((item) => {
+          return (
+            <SideBarItems
+              key={item.id}
+              icon={item.icon}
+              title={item.title}
+              path={item.path}
+            />
+          );
+        })}
+      </div>
     </div>
   );
 };

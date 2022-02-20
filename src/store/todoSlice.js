@@ -30,6 +30,7 @@ const todoSlice = createSlice({
       const completedTodo = state.todos.find((item) => item.id === todoId);
       completedTodo.completed = !action.payload.isCompleted;
     },
+    saveTodoToLocal() {},
   },
 });
 

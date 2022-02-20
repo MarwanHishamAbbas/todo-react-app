@@ -22,5 +22,3 @@ const Checkbox = ({ onToggle, completed }) => {
 };
 
 export default Checkbox;
-
-// opacity-100 bg-primary outline-none

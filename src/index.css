@@ -8,12 +8,30 @@ body {
   font-family: "Montserrat", sans-serif;
   background-color: #161d31;
   color: #b4b7bd;
-  padding: 7rem 15rem;
+  padding: 5rem 13rem;
   height: 100vh;
+}
+
+@media (max-width: 768px) {
+  body {
+    padding: 5rem;
+  }
+}
+@media (max-width: 425px) {
+  body {
+    padding: 1rem;
+  }
 }
 
 #root {
   height: 100%;
+}
+
+.layout {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:svgjs='http://svgjs.com/svgjs' width='1440' height='560' preserveAspectRatio='none' viewBox='0 0 1440 560'%3e%3cg mask='url(%26quot%3b%23SvgjsMask1050%26quot%3b)' fill='none'%3e%3crect width='1440' height='560' x='0' y='0' fill='rgba(40%2c 48%2c 70%2c 1)'%3e%3c/rect%3e%3cpath d='M0%2c646.518C119.666%2c658.622%2c228.94%2c577.461%2c322.68%2c502.1C409.793%2c432.067%2c469.121%2c337.074%2c512.858%2c234.214C555.678%2c133.51%2c592.855%2c25.133%2c571.091%2c-82.111C549.826%2c-186.897%2c457.273%2c-255.469%2c395.738%2c-342.909C325.937%2c-442.095%2c293.244%2c-575.548%2c185.143%2c-630.54C71.998%2c-688.098%2c-70.974%2c-689.314%2c-187.86%2c-639.792C-300.805%2c-591.94%2c-363.507%2c-475.186%2c-427.925%2c-370.799C-483.817%2c-280.229%2c-515.146%2c-181.472%2c-535.196%2c-76.95C-556.152%2c32.296%2c-595.638%2c149.766%2c-546.971%2c249.793C-498.506%2c349.405%2c-372.96%2c375.765%2c-283.288%2c440.805C-186.868%2c510.74%2c-118.507%2c634.531%2c0%2c646.518' fill='%231c2130'%3e%3c/path%3e%3cpath d='M1440 950.7850000000001C1512.051 943.131 1566.777 890.1990000000001 1632.218 859.097 1709.44 822.396 1809.4569999999999 820.951 1859.3220000000001 751.498 1910.724 679.905 1925.4479999999999 577.012 1893.806 494.753 1863.085 414.887 1763.019 392.41999999999996 1699.25 335.35900000000004 1645.777 287.511 1615.364 215.44400000000002 1549.596 186.75099999999998 1479.811 156.30599999999998 1399.467 151.72000000000003 1326.258 172.63099999999997 1252.773 193.62099999999998 1184.56 238.55900000000003 1143.21 302.83 1104.114 363.597 1111.788 440.087 1107.768 512.232 1104.096 578.133 1102.589 642.341 1120.754 705.795 1141.404 777.928 1160.089 857.25 1219.613 902.929 1280.483 949.6410000000001 1363.701 958.89 1440 950.7850000000001' fill='%23343f5c'%3e%3c/path%3e%3c/g%3e%3cdefs%3e%3cmask id='SvgjsMask1050'%3e%3crect width='1440' height='560' fill='white'%3e%3c/rect%3e%3c/mask%3e%3c/defs%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
 .modal {
@@ -24,7 +42,7 @@ body {
   align-items: center;
 }
 .input {
-  background: transparent;
+  background: #283046;
   outline: none;
   border: 1px solid #676d7d60;
   border-radius: 0.2rem;
@@ -33,6 +51,6 @@ body {
 
 @layer components {
   .btn {
-    @apply bg-primary w-full px-14 py-3 mb-10 rounded-lg transition-all hover:bg-[#8f84f5] text-xl font-semibold text-[#ffffff];
+    @apply bg-primary w-full px-14 xxl:px-3 py-3 mb-10 rounded-lg transition-all hover:bg-[#8f84f5] text-xl font-semibold text-[#ffffff];
   }
 }
