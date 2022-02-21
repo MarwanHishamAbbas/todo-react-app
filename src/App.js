@@ -7,6 +7,7 @@ import SideBar from "./components/Sidebar/SideBar";
 import { useState } from "react";
 import { useSelector } from "react-redux";
 import Modal from "./components/Modal/Modal";
+import { AnimatePresence } from "framer-motion";
 
 function App() {
   const todos = useSelector((state) => state.todo.todos)
@@ -16,13 +17,15 @@ function App() {
   const openModalHandler = () => {
     setModalOpen(true);
   };
-  const closeModalHandler = () => {
+  const closeModalHandler = (event) => {
     setModalOpen(false);
   };
 
   return (
     <Layout>
-      {modalOpen && <Modal onCloseModal={closeModalHandler} />}
+      <AnimatePresence initial={false} exitBeforeEnter={true}>
+        {modalOpen && <Modal onCloseModal={closeModalHandler} />}
+      </AnimatePresence>
       <SideBar onOpenModal={openModalHandler} />
       <Routes>
         <Route path="/" element={<AllTasks todos={todos} />} />

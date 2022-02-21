@@ -5,6 +5,7 @@
 @tailwind utilities;
 
 body {
+  overflow: hidden;
   font-family: "Montserrat", sans-serif;
   background-color: #161d31;
   color: #b4b7bd;
@@ -14,7 +15,7 @@ body {
     rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
 }
 
-/* @media (max-width: 900px) {
+@media (max-width: 900px) {
   body {
     padding: 3rem;
   }
@@ -23,7 +24,7 @@ body {
   body {
     padding: 1rem;
   }
-} */
+}
 
 #root {
   height: 100%;
