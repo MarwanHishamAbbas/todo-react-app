@@ -39,15 +39,15 @@ const TodoItem = ({ title, id, important, completed }) => {
     <main className="relative z-1 flex items-center justify-between px-10 py-5">
       <div className="flex items-center after:content-[''] after:absolute after:w-full after:h-[1px] after:bg-border after:bottom-0 after:left-0">
         <Checkbox completed={isCompleted} onToggle={toggleCompletedHandler} />
-        <label
+        <p
           className={
             isCompleted
-              ? "ml-3 text-lg line-through text-faded transition-all"
-              : "ml-3 text-lg transition-all"
+              ? "ml-3 break-all text-lg line-through text-faded transition-all"
+              : "ml-3 break-all text-lg transition-all"
           }
         >
           {title}
-        </label>
+        </p>
       </div>
       <div className="flex relative z-0 text-xl">
         <FiStar
