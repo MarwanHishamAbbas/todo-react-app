@@ -10,14 +10,15 @@ import Modal from "./components/Modal/Modal";
 import { AnimatePresence } from "framer-motion";
 
 function App() {
+  const [modalOpen, setModalOpen] = useState(false);
   const todos = useSelector((state) => state.todo.todos)
     .slice()
     .reverse();
-  const [modalOpen, setModalOpen] = useState(false);
+
   const openModalHandler = () => {
     setModalOpen(true);
   };
-  const closeModalHandler = (event) => {
+  const closeModalHandler = () => {
     setModalOpen(false);
   };
 
