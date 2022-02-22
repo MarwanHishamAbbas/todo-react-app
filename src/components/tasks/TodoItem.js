@@ -49,7 +49,20 @@ const TodoItem = ({ title, description, id, important, completed }) => {
   return (
     <Fragment>
       <AnimatePresence initial={false} exitBeforeEnter={true}>
-        {todoOpen && <Modal onCloseModal={closeTodoHandler}></Modal>}
+        {todoOpen && (
+          <Modal onCloseModal={closeTodoHandler}>
+            <div className="w-2/5">
+              <div className="mb-5 flex flex-col items-start">
+                <h1 className="text-xl mr-3 text-faded">Title :</h1>
+                <h3 className="text-lg">{title}</h3>
+              </div>
+              <div className="flex flex-col items-start">
+                <h1 className="text-xl mr-3 text-faded">Description :</h1>
+                <h3 className="text-lg break-all">{description}</h3>
+              </div>
+            </div>
+          </Modal>
+        )}
       </AnimatePresence>
       <motion.main
         initial={{ opacity: 0 }}

@@ -10,11 +10,11 @@ const TodoForm = ({ onCloseModal }) => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const unique_id = uuid();
-  const enteredTitle = titleInputRef.current.value;
-  const enteredDescription = descriptionInputRef.current.value;
 
   const sumbitFormHandler = (event) => {
     event.preventDefault();
+    const enteredTitle = titleInputRef.current.value;
+    const enteredDescription = descriptionInputRef.current.value;
     dispatch(
       todoActions.addTodo({
         id: unique_id,
@@ -40,7 +40,7 @@ const TodoForm = ({ onCloseModal }) => {
         <textarea
           ref={descriptionInputRef}
           className="input"
-          rows="5"
+          rows="6"
           type="text"
         />
       </div>
