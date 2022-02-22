@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 
 const SideBarItems = ({ icon, title, path }) => {
   return (
-    <ul className="flex xl:flex-col text-lg">
+    <ul className="flex text-lg">
       <li>
         <NavLink
           to={path}

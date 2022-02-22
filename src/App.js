@@ -8,6 +8,7 @@ import { useState } from "react";
 import { useSelector } from "react-redux";
 import Modal from "./components/Modal/Modal";
 import { AnimatePresence } from "framer-motion";
+import TodoForm from "./components/tasks/TodoForm";
 
 function App() {
   const [modalOpen, setModalOpen] = useState(false);
@@ -25,7 +26,11 @@ function App() {
   return (
     <Layout>
       <AnimatePresence initial={false} exitBeforeEnter={true}>
-        {modalOpen && <Modal onCloseModal={closeModalHandler} />}
+        {modalOpen && (
+          <Modal onCloseModal={closeModalHandler}>
+            <TodoForm onCloseModal={closeModalHandler} />
+          </Modal>
+        )}
       </AnimatePresence>
       <SideBar onOpenModal={openModalHandler} />
       <Routes>

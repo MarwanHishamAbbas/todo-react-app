@@ -10,11 +10,11 @@ const TodoForm = ({ onCloseModal }) => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const unique_id = uuid();
+  const enteredTitle = titleInputRef.current.value;
+  const enteredDescription = descriptionInputRef.current.value;
 
   const sumbitFormHandler = (event) => {
     event.preventDefault();
-    const enteredTitle = titleInputRef.current.value;
-    const enteredDescription = titleInputRef.current.value;
     dispatch(
       todoActions.addTodo({
         id: unique_id,
