@@ -45,7 +45,7 @@ body {
 
 .modal {
   width: clamp(50%, 500px, 90%);
-  height: min(50%, 500px);
+  height: min(70%, 500px);
   display: flex;
   justify-content: center;
   align-items: center;

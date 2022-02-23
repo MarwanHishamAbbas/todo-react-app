@@ -33,11 +33,12 @@ const TodoForm = ({ onCloseModal }) => {
     >
       <div className="flex flex-col mb-5">
         <label htmlFor="Todo">Title</label>
-        <input ref={titleInputRef} className="input" type="text" />
+        <input required ref={titleInputRef} className="input" type="text" />
       </div>
       <div className="flex flex-col">
         <label htmlFor="Description">Description</label>
         <textarea
+          required
           ref={descriptionInputRef}
           className="input"
           rows="6"
